@@ -24,6 +24,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.ShapedRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.WeightedRandomChestContent;
@@ -914,16 +915,18 @@ public class KnownDimletConfiguration {
     }
 
     public static void initCrafting(World world) {
-        List recipeList = CraftingManager.getInstance().getRecipeList();
+        List<IRecipe> recipeList = CraftingManager.getInstance().getRecipeList();
         int i = 0;
         while (i < recipeList.size()) {
-            if (recipeList.get(i) instanceof ShapedRecipes) {
-                ShapedRecipes r = (ShapedRecipes) recipeList.get(i);
-                if (r.getRecipeOutput().getItem() == DimletSetup.knownDimlet && r.recipeItems[4].getItem() == DimletSetup.knownDimlet) {
-                    recipeList.remove(i);
-                    i--;
+            IRecipe recipe = recipeList.get(i);
+            if (recipe instanceof ShapedRecipes r) {
+                ItemStack recipeOutput = r.getRecipeOutput();
+                if (recipeOutput != null && recipeOutput.getItem() == DimletSetup.knownDimlet && (r.recipeItems != null && r.recipeItems[4] != null && r.recipeItems[4].getItem() == DimletSetup.knownDimlet)) {
+                        recipeList.remove(i);
+                        i--;
+
                 }
-            } else if (recipeList.get(i) instanceof KnownDimletShapedRecipe) {
+            } else if (recipe instanceof KnownDimletShapedRecipe) {
                 recipeList.remove(i);
                 i--;
             }
