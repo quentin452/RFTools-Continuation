@@ -149,4 +149,14 @@ public class ShieldBlock extends GenericRFToolsBlock implements Infusable, IReds
     public void registerBlockIcons(IIconRegister iconRegister) {
         iconSide = iconRegister.registerIcon(RFTools.MODID + ":" + "machineShieldProjector");
     }
+
+    @Override
+    public TileEntity createNewTileEntity(World world, int meta) {
+        try {
+            return tileEntityClass.getDeclaredConstructor().newInstance();
+
+        } catch (Exception e) {
+            throw new RuntimeException("Error creating shield tile entity", e);
+        }
+    }
 }

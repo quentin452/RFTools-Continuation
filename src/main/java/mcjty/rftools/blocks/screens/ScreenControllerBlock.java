@@ -77,4 +77,9 @@ public class ScreenControllerBlock extends GenericRFToolsBlock implements Infusa
     public String getIdentifyingIconName() {
         return "machineScreenController";
     }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new ScreenControllerTileEntity();
+    }
 }

@@ -121,4 +121,8 @@ public class SpaceProjectorBlock extends GenericRFToolsBlock implements IRedston
     }
 
 
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new SpaceProjectorTileEntity();
+    }
 }

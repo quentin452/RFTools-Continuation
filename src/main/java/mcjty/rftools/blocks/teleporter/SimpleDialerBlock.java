@@ -113,4 +113,8 @@ public class SimpleDialerBlock extends LogicSlabBlock {
         return "machineSimpleDialer";
     }
 
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new SimpleDialerTileEntity();
+    }
 }

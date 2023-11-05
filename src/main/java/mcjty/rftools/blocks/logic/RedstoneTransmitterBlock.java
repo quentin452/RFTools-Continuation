@@ -88,4 +88,8 @@ public class RedstoneTransmitterBlock extends LogicSlabBlock {
         return "machineRedstoneTransmitter";
     }
 
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new RedstoneTransmitterTileEntity();
+    }
 }

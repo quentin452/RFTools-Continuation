@@ -130,4 +130,9 @@ public class TimeAbsorberBlock extends GenericRFToolsBlock implements IRedstoneC
     public int getGuiID() {
         return -1;
     }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new TimeAbsorberTileEntity();
+    }
 }

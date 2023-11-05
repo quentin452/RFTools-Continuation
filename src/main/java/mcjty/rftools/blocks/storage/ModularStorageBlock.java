@@ -21,6 +21,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 import org.lwjgl.input.Keyboard;
 
 import java.util.HashMap;
@@ -147,5 +148,10 @@ public class ModularStorageBlock extends GenericRFToolsBlock {
             }
         }
         return super.getIconInd(blockAccess, x, y, z, meta);
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new ModularStorageTileEntity();
     }
 }

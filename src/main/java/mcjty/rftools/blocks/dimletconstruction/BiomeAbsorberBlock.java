@@ -12,6 +12,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -113,5 +114,10 @@ public class BiomeAbsorberBlock extends GenericRFToolsBlock {
     @Override
     public int getGuiID() {
         return -1;
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new BiomeAbsorberTileEntity();
     }
 }

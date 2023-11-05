@@ -13,6 +13,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import org.lwjgl.input.Keyboard;
 
@@ -76,5 +77,10 @@ public class SecurityManagerBlock extends GenericRFToolsBlock {
     @Override
     public Container createServerContainer(EntityPlayer entityPlayer, TileEntity tileEntity) {
         return new SecurityManagerContainer(entityPlayer, (SecurityManagerTileEntity) tileEntity);
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new SecurityManagerTileEntity();
     }
 }

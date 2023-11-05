@@ -12,6 +12,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.world.World;
 import org.lwjgl.input.Keyboard;
 
 import java.util.List;
@@ -56,5 +57,10 @@ public class StorageScannerBlock extends GenericRFToolsBlock implements Infusabl
         StorageScannerTileEntity storageScannerTileEntity = (StorageScannerTileEntity) tileEntity;
         EmptyContainer storageScannerContainer = new EmptyContainer(entityPlayer);
         return new GuiStorageScanner(storageScannerTileEntity, storageScannerContainer);
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new StorageScannerTileEntity();
     }
 }

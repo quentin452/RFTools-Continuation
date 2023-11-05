@@ -95,4 +95,8 @@ public class SpawnerBlock extends GenericRFToolsBlock implements Infusable {
         return "machineSpawner";
     }
 
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new SpawnerTileEntity();
+    }
 }

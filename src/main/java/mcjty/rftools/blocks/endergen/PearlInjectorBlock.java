@@ -96,4 +96,9 @@ public class PearlInjectorBlock extends GenericRFToolsBlock implements IRedstone
     public boolean shouldRedstoneConduitConnect(World world, int x, int y, int z, ForgeDirection from) {
         return true;
     }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new PearlInjectorTileEntity();
+    }
 }

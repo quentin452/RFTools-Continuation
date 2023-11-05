@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.world.World;
 import org.lwjgl.input.Keyboard;
 
 import java.util.List;
@@ -62,5 +63,10 @@ public class SequencerBlock extends LogicSlabBlock {
     @Override
     public String getIdentifyingIconName() {
         return "machineSequencerTop";
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new SequencerTileEntity();
     }
 }

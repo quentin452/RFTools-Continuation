@@ -123,4 +123,13 @@ public class CrafterBlock extends GenericRFToolsBlock implements Infusable, IRed
     public Container createServerContainer(EntityPlayer entityPlayer, TileEntity tileEntity) {
         return new CrafterContainer(entityPlayer, (CrafterBaseTE) tileEntity);
     }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        try {
+            return tileEntityClass.getDeclaredConstructor().newInstance();
+        } catch (Exception e) {
+            throw new RuntimeException("Unable to create CrafterBlock tile entity from RFTOOLS", e);
+        }
+    }
 }

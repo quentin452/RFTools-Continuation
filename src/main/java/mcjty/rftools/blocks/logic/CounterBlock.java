@@ -82,4 +82,9 @@ public class CounterBlock extends LogicSlabBlock {
     public String getIdentifyingIconName() {
         return "machineCounterTop";
     }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new CounterTileEntity();
+    }
 }

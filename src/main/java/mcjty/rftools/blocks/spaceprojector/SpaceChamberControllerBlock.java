@@ -145,4 +145,8 @@ public class SpaceChamberControllerBlock extends GenericRFToolsBlock {
         return iconSide;
     }
 
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new SpaceChamberControllerTileEntity();
+    }
 }

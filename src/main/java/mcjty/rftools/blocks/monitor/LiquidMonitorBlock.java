@@ -15,6 +15,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 import org.lwjgl.input.Keyboard;
 
 import java.util.List;
@@ -105,5 +106,10 @@ public class LiquidMonitorBlock extends GenericRFToolsBlock {
             default: return iconInd;
 
         }
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new LiquidMonitorBlockTileEntity();
     }
 }

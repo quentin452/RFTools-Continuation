@@ -131,4 +131,9 @@ public class BuilderBlock extends GenericRFToolsBlock implements Infusable, IRed
 
         super.breakBlock(world, x, y, z, block, meta);
     }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new BuilderTileEntity();
+    }
 }

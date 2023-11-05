@@ -142,4 +142,8 @@ public class MatterBeamerBlock extends GenericRFToolsBlock implements Infusable,
         return iconSide;
     }
 
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new MatterBeamerTileEntity();
+    }
 }

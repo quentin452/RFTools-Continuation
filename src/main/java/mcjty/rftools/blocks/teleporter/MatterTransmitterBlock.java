@@ -171,4 +171,8 @@ public class MatterTransmitterBlock extends GenericRFToolsBlock implements Infus
         }
     }
 
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new MatterTransmitterTileEntity();
+    }
 }

@@ -127,4 +127,9 @@ public class DimensionBuilderBlock extends GenericRFToolsBlock implements Infusa
             default: return iconInd;
         }
     }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new DimensionBuilderTileEntity();
+    }
 }

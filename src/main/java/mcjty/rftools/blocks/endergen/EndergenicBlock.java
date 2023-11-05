@@ -117,4 +117,8 @@ public class EndergenicBlock extends GenericRFToolsBlock implements Infusable, I
         }
     }
 
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new EndergenicTileEntity();
+    }
 }

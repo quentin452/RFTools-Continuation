@@ -57,4 +57,9 @@ public class EnderMonitorBlock extends LogicSlabBlock {
     public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
         // We don't want to do what LogicSlabBlock does as we don't react on redstone input.
     }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new EnderMonitorTileEntity();
+    }
 }

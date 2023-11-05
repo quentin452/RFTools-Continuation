@@ -182,6 +182,12 @@ public class ScreenBlock extends GenericRFToolsBlock {
         }
     }
 
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new ScreenTileEntity();
+    }
+
+
     private static class Setup {
         private final boolean transparent;
         private final int size;

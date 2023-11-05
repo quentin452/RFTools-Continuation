@@ -120,4 +120,9 @@ public class EnvironmentalControllerBlock extends GenericRFToolsBlock implements
     public int getGuiID() {
         return RFTools.GUI_ENVIRONMENTAL_CONTROLLER;
     }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new EnvironmentalControllerTileEntity();
+    }
 }

@@ -110,4 +110,9 @@ public class RelayBlock extends GenericRFToolsBlock implements IRedstoneConnecta
             return iconFrontOff;
         }
     }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new RelayTileEntity();
+    }
 }

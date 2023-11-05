@@ -184,4 +184,8 @@ public class BlockProtectorBlock extends GenericRFToolsBlock implements Infusabl
         }
     }
 
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new BlockProtectorTileEntity();
+    }
 }

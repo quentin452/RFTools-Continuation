@@ -12,6 +12,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.world.World;
 import org.lwjgl.input.Keyboard;
 
 import java.util.List;
@@ -62,5 +63,10 @@ public class DimletResearcherBlock extends GenericRFToolsBlock implements Infusa
     @Override
     public String getIdentifyingIconName() {
         return "machineDimletResearcher";
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new DimletResearcherTileEntity();
     }
 }
