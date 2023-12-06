@@ -24,4 +24,4 @@ Discord server : https://discord.gg/ZnmHKJzKkZ
 
 # Resume of changes in the fork
 
--Fix #492 , fix null crash caused by recipes on modpacks
+-Fix [#492](https://github.com/quentin452/privates-minecraft-modpack/issues/492) , fix null crash caused by recipes on modpacks
