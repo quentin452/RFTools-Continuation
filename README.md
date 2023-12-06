@@ -1,27 +1,27 @@
-# Description
+Agricraft Continuation
 
-Just a continuation of RFTOOLS for minecraft 1.7.10
+This mod is a fork of https://legacy.curseforge.com/minecraft/mc-mods/rftools
 
-The original mod : [HERE]([https://legacy.curseforge.com/minecraft/mc-mods/dangerrpg](https://www.curseforge.com/minecraft/mc-mods/rftools))
-
-# What this mod have for now?
-
-Go here : [Wiki](https://github.com/quentin452/RFTools-Continuation/wiki)
+To see new changes that's made in the fork you can see https://github.com/quentin452/RFTools-Continuation/wiki
 
 # Links to descriptions of my projects.
 
-// [*Modrinth*](https://modrinth.com/mod/dangerrpg-continuation)
+[*Modrinth(NOT YET)*]()
 
 [*Github*](https://github.com/quentin452/RFTools-Continuation)
 
-// [*Curseforge*](https://legacy.curseforge.com/minecraft/mc-mods/dangerrpg-continuation)
+[*Curseforge*](https://legacy.curseforge.com/minecraft/mc-mods/rftools-continuation)
 
 # Requirement
 
-no requirements
+Require [mcjtylib](https://legacy.curseforge.com/minecraft/mc-mods/mcjtylib)
 
 # Discord
 
-Add me on discord : imacatfr
+Add me on discord : iamacatfr
 
 Discord server : https://discord.gg/ZnmHKJzKkZ
+
+# Resume of changes in the fork
+
+-Fix #492 , fix null crash caused by recipes on modpacks
